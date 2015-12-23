@@ -1,0 +1,23 @@
+<div class="container">
+
+  <%= form_for @article do |f| %>
+
+    <%= render 'shared/error_messages', object: @article %>
+
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <%= f.label :text %><br>
+      <%= f.text_area :text %>
+    </p>
+
+    <p>
+      <%= f.submit class: "btn btn-primary" %>
+    </p>
+
+  <% end %>
+
+</div>

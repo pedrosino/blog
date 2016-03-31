@@ -1,22 +1,14 @@
 <div class="container">
 
-  <%= form_for @article do |f| %>
+  <%= simple_form_for(@article, html: { class: 'form-horizontal' }) do |f| %>
 
     <%= render 'shared/error_messages', object: @article %>
 
-    <p>
-      <%= f.label :title %><br>
-      <%= f.text_field :title %>
-    </p>
+    <%= f.input :title, hint: "Article's title" %>
 
-    <p>
-      <%= f.label :text %><br>
-      <%= f.text_area :text %>
-    </p>
+    <%= f.input :text, hint: "The article text goes here" %>
 
-    <p>
-      <%= f.submit class: "btn btn-primary" %>
-    </p>
+    <%= f.submit class: "btn btn-primary" %>
 
   <% end %>
 

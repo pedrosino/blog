@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Unidades</h2>
+
+  <table class="table">
+    <tr>
+      <th>
+        SIGLA
+      </th>
+      <th>
+        Nome completo
+      </th>
+    </tr>
+    <% @unidades.each do |unidade| %>
+      <tr>
+        <td><%= unidade.sigla %></td>
+        <td><%= unidade.nome %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= link_to button_tag(class: 'btn btn-success', 'Nova unidade'), new_unidade_path %>
+</div>

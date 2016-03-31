@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Nova Unidade</h2>
+
+  <%= simple_form_for(@unidade, html: {class: 'form-horizontal'}) do |f| %>
+    <%= f.input :sigla %>
+    <%= f.input :nome %>
+    <%= f.button :submit, "Criar", class: "btn btn-primary" %>
+  <% end %>
+</div>
